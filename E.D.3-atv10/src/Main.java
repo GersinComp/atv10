@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Departamento> departamentos = new ArrayList<>();
-        String nomeDepartamento = "";
         int indiceDepartamento = 0;
 
         Boolean controle = true;
@@ -37,7 +36,7 @@ public class Main {
                     indiceDepartamento = (Integer.parseInt(Estaticos.JOptionInput("Selecione o departamento:\n" + Estaticos.listarDepartamento(departamentos))) - 1);
                     switch (option2) {
                         case 1:
-                            if (indiceDepartamento != -1) {
+                            if (indiceDepartamento > -1) {
                                 Mensalista mensalista = new Mensalista(departamentos.get(indiceDepartamento));
                                 mensalista.setNome(Estaticos.JOptionInput("Informe o nome do funcionário: "));
                                 mensalista.setCidade(Estaticos.JOptionInput("Informe a cidade: "));
@@ -48,7 +47,7 @@ public class Main {
                                 Estaticos.JOptionMenssage("Departamento inesistente!");
                             break;
                         case 2:
-                            if (indiceDepartamento != -1) {
+                            if (indiceDepartamento > -1) {
                                 Horista horista = new Horista(departamentos.get(indiceDepartamento));
                                 horista.setNome(Estaticos.JOptionInput("Informe o nome do funcionário: "));
                                 horista.setCidade(Estaticos.JOptionInput("Informe a cidade: "));
@@ -60,7 +59,7 @@ public class Main {
                                 Estaticos.JOptionMenssage("Departamento inesistente!");
                             break;
                         case 3:
-                            if (indiceDepartamento != -1) {
+                            if (indiceDepartamento > -1) {
                                 Comissionado comissionado = new Comissionado(departamentos.get(indiceDepartamento));
                                 comissionado.setNome(Estaticos.JOptionInput("Informe o nome do funcionário: "));
                                 comissionado.setCidade(Estaticos.JOptionInput("Informe a cidade: "));
@@ -86,8 +85,8 @@ public class Main {
                     for (int i = 0; i < departamentos.size(); i++) {
                         folhaTotal += departamentos.get(i).folhaTotalDep();
                         folhaDepartamento = String.valueOf(departamentos.get(i).folhaTotalDep());
-                        System.out.println("======================================================\n" + "Folha do departamento " + departamentos.get(i).getDescricao() + ": R$" + folhaDepartamento + "\n" +
-                                "======================================================\n");
+                        System.out.println("======================================================\n" +
+                                "Folha do departamento " + departamentos.get(i).getDescricao() + ": R$" + folhaDepartamento);
                     }
                     System.out.println("A folha total de todos os departamentos: R$" + folhaTotal);
                     break;

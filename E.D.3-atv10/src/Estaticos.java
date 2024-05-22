@@ -24,18 +24,6 @@ public class Estaticos {
         return Double.parseDouble(tratar);
     }
 
-    public static int buscarDepartamento(String nomeDepartamento, ArrayList<Departamento> departamentos) {
-        int indice = 0;
-        for (int i = 0; i < departamentos.size(); i++) {
-            if (departamentos.get(i).getDescricao().equals(nomeDepartamento)){
-                indice = i;
-            }
-            else
-                indice = -1;
-        }
-        return indice;
-    }
-
     public static String listarDepartamento(ArrayList<Departamento> departamentos) {
         String nomeDepartamentos = "";
         for (int i = 0; i < departamentos.size(); i++) {

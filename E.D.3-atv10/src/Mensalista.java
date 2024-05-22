@@ -7,5 +7,4 @@ public class Mensalista  extends Funcionario{
     public void setSalario(double salario) {
         this.salario = salario;
     }
-
 }

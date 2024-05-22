@@ -5,7 +5,7 @@ public class Horista extends Funcionario{
     }
 
     public double calculaSalario() {
-        this.salario = super.dep.getValorHrTrab() * super.getQntdHrsTrabalhadas();
+        this.salario = super.dep.getValorHrTrab() * super.qntdHrsTrabalhadas;
         return salario;
     }
 }

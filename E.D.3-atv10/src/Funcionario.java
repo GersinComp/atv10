@@ -16,32 +16,8 @@ public class Funcionario {
         return nome;
     }
 
-    public String getCidade() {
-        return cidade;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public double getQntdHrsTrabalhadas() {
-        return qntdHrsTrabalhadas;
-    }
-
     public double getSalario() {
         return salario;
-    }
-
-    public double getValorVendas() {
-        return valorVendas;
-    }
-
-    public double getPercentualComissao() {
-        return percentualComissao;
-    }
-
-    public Departamento getDep() {
-        return dep;
     }
 
     public void setNome(String nome) {
